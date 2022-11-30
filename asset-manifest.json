@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blendedwave/static/css/main.5aeb49a0.css",
-    "main.js": "/blendedwave/static/js/main.9902b800.js",
+    "main.js": "/blendedwave/static/js/main.fa6ff9c0.js",
     "static/media/main_logo.svg": "/blendedwave/static/media/main_logo.564d7818f21b802b5d5379c996e440c4.svg",
     "static/media/sopeomore.jpg": "/blendedwave/static/media/sopeomore.50b28f231c0f95ff90cb.jpg",
     "static/media/NotoSansKR-Light.otf": "/blendedwave/static/media/NotoSansKR-Light.7d4ce2f6f92cffc70600.otf",
@@ -22,10 +22,10 @@
     "static/media/facebook.svg": "/blendedwave/static/media/facebook.d2bb8c6a4b438b7765cbf4a517960ce1.svg",
     "index.html": "/blendedwave/index.html",
     "main.5aeb49a0.css.map": "/blendedwave/static/css/main.5aeb49a0.css.map",
-    "main.9902b800.js.map": "/blendedwave/static/js/main.9902b800.js.map"
+    "main.fa6ff9c0.js.map": "/blendedwave/static/js/main.fa6ff9c0.js.map"
   },
   "entrypoints": [
     "static/css/main.5aeb49a0.css",
-    "static/js/main.9902b800.js"
+    "static/js/main.fa6ff9c0.js"
   ]
 }
