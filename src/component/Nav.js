@@ -22,6 +22,9 @@ const Nav = styled.div`
   &>div{
     display: flex;
     width: 100%;
+    &>a {
+      display: flex;
+    }
   }
 `
 
