@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+import ScrollToTop from './component/ScrollToTop';
+import MainComponent from './page/Main';
+import WorkComponent from './page/Work';
+import ArtistComponent from './page/Artist';
+
+const AppComponent = styled.div`
+  font-family: 'Noto Sans CJK KR';
+	font-size: 16px;
+  font-weight: 400;
+`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppComponent className="App">
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<MainComponent />}></Route>
+          <Route path="/work" element={<WorkComponent />}></Route>
+          <Route path="/shop" element={<MainComponent />}></Route>
+          <Route path="/about" element={<MainComponent />}></Route>
+          <Route path="/artist" element={<ArtistComponent />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </AppComponent>
   );
 }
 
