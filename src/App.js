@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import ScrollToTop from './component/ScrollToTop';
 import MainComponent from './page/Main';
@@ -16,7 +16,7 @@ const AppComponent = styled.div`
 const App = () => {
   return (
     <AppComponent className="App">
-      <BrowserRouter>
+      <HashRouter basename="/">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<MainComponent />}></Route>
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/about" element={<MainComponent />}></Route>
           <Route path="/artist" element={<ArtistComponent />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AppComponent>
   );
 }
