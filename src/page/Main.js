@@ -5,9 +5,9 @@ import NavComponent from '../component/Nav';
 import BottomComponent from '../component/Bottom';
 import useWindowDimensions from '../component/useWindowDimensions';
 
-import Slider from "react-slick";
+// import Slider from "react-slick";
 
-import Vimeo from '@u-wave/react-vimeo';
+// import Vimeo from '@u-wave/react-vimeo';
 
 // 이미지
 import sopeomore from '../styles/images/sopeomore.jpg';
@@ -25,21 +25,21 @@ const Main = styled.div`
   z-index: -99;
 `
 
-const StyledSlider = styled(Slider)`
-  .slick-track {
-	width: 100% !important;
-	height: 100vh !important;
-  }
+// const StyledSlider = styled(Slider)`
+//   .slick-track {
+// 	width: 100% !important;
+// 	height: 100vh !important;
+//   }
 
-  .slick-dots {
-    bottom: -50px;
-    margin-top: 200px;
-  }
+//   .slick-dots {
+//     bottom: -50px;
+//     margin-top: 200px;
+//   }
 
-  .slick-track {
-    /* overflow-x: hidden; */
-  }
-`
+//   .slick-track {
+//     /* overflow-x: hidden; */
+//   }
+// `
 
 const VideoContainer = styled.div`
    position: fixed;
@@ -52,16 +52,16 @@ const VideoContainer = styled.div`
    overflow: hidden;
 `
 
-const Video = styled(props => <Vimeo {...props} />)`
-  width: 100vw;
-  height: 56.25vw; // for a 16:9 aspect ratio, 9/16*100 = 56.25
-  min-height: 100vh;
-  min-width: 177.77vh; // for a 16:9 aspect ratio, 16/9*100 = 177.77
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`
+// const Video = styled(props => <Vimeo {...props} />)`
+//   width: 100vw;
+//   height: 56.25vw; // for a 16:9 aspect ratio, 9/16*100 = 56.25
+//   min-height: 100vh;
+//   min-width: 177.77vh; // for a 16:9 aspect ratio, 16/9*100 = 177.77
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// `
 
 const Overlay = styled.div`
   position: fixed;
@@ -79,22 +79,22 @@ const Overlay = styled.div`
 `
 
 const MainComponent = () => {
-	const { height, width } = useWindowDimensions();
-	const [slideIndex, setSlideIndex] = useState(0);
-	let settings = {
-		// focusOnSelect: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		beforeChange: (current, next) => setSlideIndex(next),
-	};
+  const { height, width } = useWindowDimensions();
+  const [slideIndex, setSlideIndex] = useState(0);
+  let settings = {
+    // focusOnSelect: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: (current, next) => setSlideIndex(next),
+  };
 
-	return (
-		<>
-			<NavComponent dark />
-			<Main>
-				<StyledSlider {...settings} >
+  return (
+    <>
+      <NavComponent dark />
+      <Main>
+        {/* <StyledSlider {...settings} >
 					<div>
 
 						<VideoContainer>
@@ -112,13 +112,13 @@ const MainComponent = () => {
 								loop
 							/>
 						</VideoContainer>
-						{/* <Overlay /> */}
+						<Overlay />
 					</div>
-				</StyledSlider>
-			</Main>
-			<BottomComponent dark />
-		</>
-	);
+				</StyledSlider> */}
+      </Main>
+      <BottomComponent dark />
+    </>
+  );
 }
 
 export default MainComponent;
