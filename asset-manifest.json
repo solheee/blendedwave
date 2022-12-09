@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blendedwave/static/css/main.5aeb49a0.css",
-    "main.js": "/blendedwave/static/js/main.43e3d4ff.js",
+    "main.css": "/blendedwave/static/css/main.8ab00602.css",
+    "main.js": "/blendedwave/static/js/main.29060618.js",
     "static/media/main_logo.svg": "/blendedwave/static/media/main_logo.564d7818f21b802b5d5379c996e440c4.svg",
     "static/media/sopeomore.jpg": "/blendedwave/static/media/sopeomore.50b28f231c0f95ff90cb.jpg",
     "static/media/NotoSansKR-Light.otf": "/blendedwave/static/media/NotoSansKR-Light.7d4ce2f6f92cffc70600.otf",
@@ -21,11 +21,12 @@
     "static/media/nav_logo.svg": "/blendedwave/static/media/nav_logo.49db4e38b68eb939f38c8a6c75a1ed18.svg",
     "static/media/facebook.svg": "/blendedwave/static/media/facebook.d2bb8c6a4b438b7765cbf4a517960ce1.svg",
     "index.html": "/blendedwave/index.html",
-    "main.5aeb49a0.css.map": "/blendedwave/static/css/main.5aeb49a0.css.map",
-    "main.43e3d4ff.js.map": "/blendedwave/static/js/main.43e3d4ff.js.map"
+    "static/media/plus.svg": "/blendedwave/static/media/plus.e1535f3eedb7c9a0ae8e1f8f8b563521.svg",
+    "main.8ab00602.css.map": "/blendedwave/static/css/main.8ab00602.css.map",
+    "main.29060618.js.map": "/blendedwave/static/js/main.29060618.js.map"
   },
   "entrypoints": [
-    "static/css/main.5aeb49a0.css",
-    "static/js/main.43e3d4ff.js"
+    "static/css/main.8ab00602.css",
+    "static/js/main.29060618.js"
   ]
 }
