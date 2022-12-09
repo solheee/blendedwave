@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import useWindowDimensions from './useWindowDimensions';
 
 import logo from '../styles/images/nav_logo.svg';
 import logo_blue from '../styles/images/nav_logo_blue.svg';
-import useWindowDimensions from './useWindowDimensions';
+import plus from '../styles/images/plus.svg';
 
 const Nav = styled.div`
   box-sizing: border-box;
@@ -25,6 +26,17 @@ const Nav = styled.div`
     &>a {
       display: flex;
     }
+    &:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+      >button {
+        background-image: url(${plus});
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 `
 
@@ -33,35 +45,36 @@ const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     position: absolute;
     top: 57px;
     right: 0;
     margin: 0;
-    width: 40%;
-    min-width: 140px;
+    width: 140px;
     padding: 0;
     list-style: none;
     font-size: 0.875rem;
     &>li {
       box-sizing: border-box;
-      padding: 10px;
       width: 100%;
       color: #37458C;
-      background-color: rgba(255,255,255,.6);
+      background-color: rgba(255,255,255,.75);
       border: 1px solid #37458C;
       &:not(:first-child) {
         border-top: none;
       }
       cursor: pointer;
       &>a {
+        box-sizing:border-box;
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
         text-decoration: none;
         color: inherit;
         /* opacity: .8;
         &:hover {
           opacity: 1;
         } */
-        
+
         &:after {
           z-index: 1;
           font-size: 0.875rem;
@@ -98,8 +111,7 @@ const NavMenu = styled.ul`
       &>a {
         text-decoration: none;
         color: inherit;
-        opacity: .8;
-        
+        opacity: ${props => props.dark ? .8 : 1};
         &:hover {
           opacity: 1;
         }
@@ -130,7 +142,8 @@ const NavMenu = styled.ul`
 
 const NavComponent = ({ dark }) => {
   const { innerWidth } = useWindowDimensions();
-  const [isMobile, setMobile] = useState(false);
+  const [isMobile, setMobile] = useState(null);
+  const [isMenuOn, setMenuOn] = useState(false);
 
   useEffect(() => {
     if (!innerWidth) return;
@@ -159,31 +172,33 @@ const NavComponent = ({ dark }) => {
         {
           isMobile &&
           <>
-
+            <button onClick={() => setMenuOn(!isMenuOn)}>
+            </button>
           </>
         }
-        <NavMenu mobile={isMobile}>
-          <li>
-            <Link to='/work'>
-              WORK
-            </Link>
-          </li>
-          {/* <li>
+        {(!isMobile || (isMobile && isMenuOn)) &&
+          <NavMenu mobile={isMobile} dark={dark}>
+            <li>
+              <Link to='/work' onClick={() => { setMenuOn(false) }}>
+                WORK
+              </Link>
+            </li>
+            {/* <li>
                 <Link to='/shop'>
                   SHOP
                 </Link>
               </li> */}
-          <li>
-            <Link to='/artist'>
-              ARTIST
-            </Link>
-          </li>
-          <li>
-            <Link to='/about'>
-              INFO
-            </Link>
-          </li>
-        </NavMenu>
+            <li>
+              <Link to='/artist' onClick={() => { setMenuOn(false) }}>
+                ARTIST
+              </Link>
+            </li>
+            <li>
+              <Link to='/about' onClick={() => { setMenuOn(false) }}>
+                INFO
+              </Link>
+            </li>
+          </NavMenu>}
       </div>
     </Nav>
   );

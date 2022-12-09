@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import NavComponent from '../component/Nav';
 import BottomComponent from '../component/Bottom';
 
 // 이미지
@@ -52,8 +51,12 @@ const ArtistCard = styled.div`
 	}
 `
 
-const ArtistComponent = () => {
+const ArtistComponent = ({ setDarkNav }) => {
 	const [artistList, setArtistList] = useState([]);
+
+	useEffect(() => {
+		setDarkNav(false);
+	}, [setDarkNav])
 
 	useEffect(() => {
 		setArtistList([
@@ -77,7 +80,6 @@ const ArtistComponent = () => {
 
 	return (
 		<>
-			<NavComponent />
 			<Artist>
 				{artistList && artistList.map((item) => {
 					return (

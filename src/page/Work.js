@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import NavComponent from '../component/Nav';
 import BottomComponent from '../component/Bottom';
 
 // 이미지
-import sopeomore from '../styles/images/sopeomore.jpg';
-import logo from '../styles/images/main_logo.svg';
-// import logo_blue from '../styles/images/main_logo_blue.svg';
 
 const Work = styled.div`
   	box-sizing: border-box;
@@ -53,8 +49,11 @@ const WorkCard = styled.div`
 	}
 `
 
-const WorkComponent = () => {
+const WorkComponent = ({ setDarkNav }) => {
 	const [workList, setWorkList] = useState([]);
+	useEffect(() => {
+		setDarkNav(false);
+	}, [setDarkNav])
 
 	useEffect(() => {
 		setWorkList([
@@ -107,7 +106,6 @@ const WorkComponent = () => {
 
 	return (
 		<>
-			<NavComponent />
 			<Work>
 				<div>
 					<div>

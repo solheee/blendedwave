@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import NavComponent from '../component/Nav';
 import BottomComponent from '../component/Bottom';
 import useWindowDimensions from '../component/useWindowDimensions';
 
@@ -78,21 +77,24 @@ const Overlay = styled.div`
   z-index: -1;
 `
 
-const MainComponent = () => {
+const MainComponent = ({ setDarkNav }) => {
   const { height, width } = useWindowDimensions();
-  const [slideIndex, setSlideIndex] = useState(0);
-  let settings = {
-    // focusOnSelect: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    beforeChange: (current, next) => setSlideIndex(next),
-  };
+  // const [slideIndex, setSlideIndex] = useState(0);
+  // let settings = {
+  //   // focusOnSelect: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   beforeChange: (current, next) => setSlideIndex(next),
+  // };
+
+  useEffect(() => {
+    setDarkNav(true);
+  }, [setDarkNav])
 
   return (
     <>
-      <NavComponent dark />
       <Main>
         {/* <StyledSlider {...settings} >
 					<div>
