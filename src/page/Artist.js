@@ -14,6 +14,10 @@ const Artist = styled.div`
   z-index: -99;
   padding-top: 58px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const ArtistCard = styled.div`
@@ -75,27 +79,25 @@ const ArtistComponent = () => {
 		<>
 			<NavComponent />
 			<Artist>
-				<div>
-					{artistList && artistList.map((item) => {
-						return (
-							<ArtistCard>
-								<div className='artist-main-image'></div>
-								<div className='artist-info'>
+				{artistList && artistList.map((item) => {
+					return (
+						<ArtistCard>
+							<div className='artist-main-image'></div>
+							<div className='artist-info'>
+								<div>
 									<div>
-										<div>
-											<p className='artist-name'>DISCUZZ</p>
-											<p className='artist-job'>Illustrator & composer</p>
-										</div>
-										<div>sns</div>
+										<p className='artist-name'>DISCUZZ</p>
+										<p className='artist-job'>Illustrator & composer</p>
 									</div>
-									<div>
-										<p>discuzz@gmail.com</p>
-									</div>
+									<div>sns</div>
 								</div>
-							</ArtistCard>
-						)
-					})}
-				</div>
+								<div>
+									<p>discuzz@gmail.com</p>
+								</div>
+							</div>
+						</ArtistCard>
+					)
+				})}
 			</Artist>
 			<BottomComponent />
 		</>
