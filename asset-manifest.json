@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/blendedwave/static/css/main.8ab00602.css",
-    "main.js": "/blendedwave/static/js/main.29060618.js",
+    "main.js": "/blendedwave/static/js/main.62f3d964.js",
     "static/media/main_logo.svg": "/blendedwave/static/media/main_logo.564d7818f21b802b5d5379c996e440c4.svg",
-    "static/media/sopeomore.jpg": "/blendedwave/static/media/sopeomore.50b28f231c0f95ff90cb.jpg",
     "static/media/NotoSansKR-Light.otf": "/blendedwave/static/media/NotoSansKR-Light.7d4ce2f6f92cffc70600.otf",
     "static/media/NotoSansKR-Bold.otf": "/blendedwave/static/media/NotoSansKR-Bold.bbb4ca5df6c6540f4af8.otf",
     "static/media/NotoSansKR-Regular.otf": "/blendedwave/static/media/NotoSansKR-Regular.bf54b090356010039bab.otf",
@@ -16,17 +15,20 @@
     "static/media/NotoSansKR-Bold.woff2": "/blendedwave/static/media/NotoSansKR-Bold.a4ecc3f7a43f7d43ce24.woff2",
     "static/media/NotoSansKR-Medium.woff2": "/blendedwave/static/media/NotoSansKR-Medium.e5d0c16f11ebac0c56d2.woff2",
     "static/media/NotoSansKR-Light.woff2": "/blendedwave/static/media/NotoSansKR-Light.e2557c2be18ddd169ee9.woff2",
-    "static/media/instagram.svg": "/blendedwave/static/media/instagram.24a1aba6dcce0e109ee2398030aeabfd.svg",
     "static/media/nav_logo_blue.svg": "/blendedwave/static/media/nav_logo_blue.38b0c4fb602391a4d5b98d9bf567d35f.svg",
     "static/media/nav_logo.svg": "/blendedwave/static/media/nav_logo.49db4e38b68eb939f38c8a6c75a1ed18.svg",
-    "static/media/facebook.svg": "/blendedwave/static/media/facebook.d2bb8c6a4b438b7765cbf4a517960ce1.svg",
+    "static/media/instagram.svg": "/blendedwave/static/media/instagram.f22246c4c507694d5573bbb3d6db33f4.svg",
+    "static/media/discord.svg": "/blendedwave/static/media/discord.a92aba65e8b18884002d3df802e0db18.svg",
+    "static/media/twitter.svg": "/blendedwave/static/media/twitter.6c50b96a99966deeb5e19823aa9a34c1.svg",
     "index.html": "/blendedwave/index.html",
+    "static/media/down_blue.svg": "/blendedwave/static/media/down_blue.71d40e81b537da7d4ff467ed33ece555.svg",
+    "static/media/plus_blue.svg": "/blendedwave/static/media/plus_blue.fe06cf3da2a4d80ee8cfd66f54c6f6db.svg",
     "static/media/plus.svg": "/blendedwave/static/media/plus.e1535f3eedb7c9a0ae8e1f8f8b563521.svg",
     "main.8ab00602.css.map": "/blendedwave/static/css/main.8ab00602.css.map",
-    "main.29060618.js.map": "/blendedwave/static/js/main.29060618.js.map"
+    "main.62f3d964.js.map": "/blendedwave/static/js/main.62f3d964.js.map"
   },
   "entrypoints": [
     "static/css/main.8ab00602.css",
-    "static/js/main.29060618.js"
+    "static/js/main.62f3d964.js"
   ]
 }
