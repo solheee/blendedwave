@@ -6,6 +6,8 @@ import useWindowDimensions from './useWindowDimensions';
 import logo from '../styles/images/nav_logo.svg';
 import logo_blue from '../styles/images/nav_logo_blue.svg';
 import plus from '../styles/images/plus.svg';
+import plus_blue from '../styles/images/plus_blue.svg';
+import down_blue from '../styles/images/down_blue.svg';
 
 const Nav = styled.div`
   box-sizing: border-box;
@@ -17,8 +19,9 @@ const Nav = styled.div`
   width: calc(100vw - (100vw - 100%));
   height: 58px;
   padding: 10px 20px;
-  color: #fff;
-  background-color: ${props => props.dark ? 'none' : '#37458C'};
+  color: ${props => props.dark ? '#fff' : '#37458C'}; */
+  /* background-color: ${props => props.dark ? 'none' : '#37458C'}; */
+  background-color: none;
   z-index: 90;
   &>div{
     display: flex;
@@ -30,7 +33,7 @@ const Nav = styled.div`
       display: flex;
       justify-content: flex-end;
       >button {
-        background-image: url(${plus});
+        background-image: url(${({ dark }) => dark ? plus : plus_blue});
         width: 20px;
         height: 20px;
         background-position: center;
@@ -42,14 +45,15 @@ const Nav = styled.div`
 
 const NavMenu = styled.ul`
   ${props => props.mobile ? css`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display: block;
     position: absolute;
     top: 57px;
     right: 0;
     margin: 0;
     width: 140px;
+    max-height: ${({ visible }) => visible ? '124px' : 0};
+    transition: max-height .1s ease-in-out;
+    overflow: hidden;
     padding: 0;
     list-style: none;
     font-size: 0.875rem;
@@ -164,7 +168,7 @@ const NavComponent = ({ dark }) => {
     <Nav dark={dark}>
       <div>
         <Link to='/'>
-          <img src={logo} alt='purpledog' />
+          <img src={dark ? logo : logo_blue} alt='purpledog' />
         </Link>
       </div>
 
@@ -176,8 +180,8 @@ const NavComponent = ({ dark }) => {
             </button>
           </>
         }
-        {(!isMobile || (isMobile && isMenuOn)) &&
-          <NavMenu mobile={isMobile} dark={dark}>
+        {(!isMobile || isMobile) &&
+          <NavMenu mobile={isMobile} dark={dark} visible={isMenuOn}>
             <li>
               <Link to='/work' onClick={() => { setMenuOn(false) }}>
                 WORK
