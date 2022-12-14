@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import BottomComponent from '../component/Bottom';
 
 // 이미지
-import sopeomore from '../styles/images/sopeomore.jpg';
-import logo from '../styles/images/main_logo.svg';
-// import logo_blue from '../styles/images/main_logo_blue.svg';
+// import logo from '../styles/images/main_logo.svg';
+import instagram from '../styles/images/instagram.svg';
+import discord from '../styles/images/discord.svg';
+import twitter from '../styles/images/twitter.svg';
 
 const Artist = styled.div`
   box-sizing: border-box;
@@ -91,7 +92,11 @@ const ArtistComponent = ({ setDarkNav }) => {
 										<p className='artist-name'>DISCUZZ</p>
 										<p className='artist-job'>Illustrator & composer</p>
 									</div>
-									<div>sns</div>
+									<div>
+										<img src={instagram} alt="" />
+										<img src={discord} alt="" />
+										<img src={twitter} alt="" />
+									</div>
 								</div>
 								<div>
 									<p>discuzz@gmail.com</p>
