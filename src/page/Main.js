@@ -9,14 +9,12 @@ import useWindowDimensions from '../component/useWindowDimensions';
 // import Vimeo from '@u-wave/react-vimeo';
 
 // 이미지
-import sopeomore from '../styles/images/sopeomore.jpg';
 import logo from '../styles/images/main_logo.svg';
 // import logo_blue from '../styles/images/main_logo_blue.svg';
 
 const Main = styled.div`
   box-sizing: border-box;
   height: 100vh;
-  /* background-image: url(${sopeomore}); */
   background-color: #292B35;
   background-position: center;
   background-repeat: no-repeat;
