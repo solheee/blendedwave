@@ -9,7 +9,6 @@ const Bottom = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: ${props => props.dark ? '#292B35' : '#fff'};
 	height: 40px;
 	width: calc(100vw - (100vw - 100%));
 	color: ${props => props.dark ? '#C9CEE8' : '#545B7E'};
@@ -45,9 +44,9 @@ const BottomLink = styled.div`
 		}
 	}
 `
-const BottomComponent = ({ dark }) => {
+const BottomComponent = () => {
 	return (
-		<Bottom dark={dark}>
+		<Bottom dark={true}>
 			<CopyrightText>
 				COPYRIGHT ⓒ BlENDED WAVE. ALL RIGHTS RESERVED.
 				{/* <BottomLink> */}
