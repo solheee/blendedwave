@@ -49,11 +49,8 @@ const WorkCard = styled.div`
 	}
 `
 
-const WorkComponent = ({ setDarkNav }) => {
+const WorkComponent = () => {
 	const [workList, setWorkList] = useState([]);
-	useEffect(() => {
-		setDarkNav(false);
-	}, [setDarkNav])
 
 	useEffect(() => {
 		setWorkList([

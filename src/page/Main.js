@@ -15,7 +15,6 @@ import logo from '../styles/images/main_logo.svg';
 const Main = styled.div`
   box-sizing: border-box;
   height: 100vh;
-  background-color: #292B35;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +74,7 @@ const Overlay = styled.div`
   z-index: -1;
 `
 
-const MainComponent = ({ setDarkNav }) => {
+const MainComponent = () => {
   const { height, width } = useWindowDimensions();
   // const [slideIndex, setSlideIndex] = useState(0);
   // let settings = {
@@ -86,10 +85,6 @@ const MainComponent = ({ setDarkNav }) => {
   //   slidesToScroll: 1,
   //   beforeChange: (current, next) => setSlideIndex(next),
   // };
-
-  useEffect(() => {
-    setDarkNav(true);
-  }, [setDarkNav])
 
   return (
     <>
@@ -116,7 +111,7 @@ const MainComponent = ({ setDarkNav }) => {
 					</div>
 				</StyledSlider> */}
       </Main>
-      <BottomComponent dark />
+      <BottomComponent />
     </>
   );
 }
