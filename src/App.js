@@ -6,6 +6,7 @@ import ScrollToTop from './component/ScrollToTop';
 import MainComponent from './page/Main';
 import WorkComponent from './page/Work';
 import ArtistComponent from './page/Artist';
+import IntroductionComponent from './page/Introduction';
 import NavComponent from './component/Nav';
 
 const AppComponent = styled.div`
@@ -23,11 +24,12 @@ const App = () => {
         <ScrollToTop />
         <NavComponent dark={isDarkNav} />
         <Routes>
-          <Route path="/" element={<MainComponent setDarkNav={setDarkNav} />}></Route>
-          <Route path="/work" element={<WorkComponent setDarkNav={setDarkNav} />}></Route>
-          <Route path="/shop" element={<MainComponent setDarkNav={setDarkNav} />}></Route>
-          <Route path="/about" element={<MainComponent setDarkNav={setDarkNav} />}></Route>
-          <Route path="/artist" element={<ArtistComponent setDarkNav={setDarkNav} />}></Route>
+          <Route path="/" element={<MainComponent />}></Route>
+          <Route path="/work" element={<WorkComponent />}></Route>
+          <Route path="/shop" element={<MainComponent />}></Route>
+          <Route path="/about" element={<MainComponent />}></Route>
+          <Route path="/artist" element={<ArtistComponent />}></Route>
+          <Route path="/artist/:name" element={<IntroductionComponent />}></Route>
         </Routes>
       </HashRouter>
     </AppComponent>

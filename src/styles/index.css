@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background-color: #252429;
 }
 
 h1,
@@ -7,6 +8,11 @@ h2,
 h3,
 p {
 	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
 button {
